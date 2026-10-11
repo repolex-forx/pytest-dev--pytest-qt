@@ -1,1 +1,140 @@
-Initializing
+# Repolex Knowledge Graph of pytest-dev/pytest-qt
+
+RDF knowledge graph data for [pytest-dev/pytest-qt](https://github.com/pytest-dev/pytest-qt), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download pytest-dev/pytest-qt
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 9dc1aa871bbeda6287628971fe1f84be4186c688
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 9dc1aa871bbeda6287628971fe1f84be4186c688
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 11439c11c6365d6b2245bae2d65e1fc5c6d9589f.nq.gz
+│   ├── 15c724930c2f02e7afce7dbacc0794023b2930ea.nq.gz
+│   ├── 17f57af26e27717f03ebe087d196c775095682d3.nq.gz
+│   ├── 207351ffeecb7335b0b0308fd1890d8c9baa1e06.nq.gz
+│   ├── 24d79f7452f32e84abcfa78c5eb12d4018b14cb6.nq.gz
+│   ├── 26b0a16395c140f34d740c3cf77bca24f7fcd781.nq.gz
+│   ├── 26f27bfeb97b9b82d8f03d2b0d8b1e9a55b23e86.nq.gz
+│   ├── 28d0765d4c67b9d1e3863e49485e5e86ece5094a.nq.gz
+│   ├── 2e797d0e6c943129f38133271a97359ce517e1fb.nq.gz
+│   ├── 2f5427e6f9116d06ee34807cbbe9936966bf27d8.nq.gz
+│   ├── 2f66b00f95f2d4e302d37916a4a3f1d1093702bb.nq.gz
+│   ├── 368cf994abd16ecc8f2505ca4381ce84ed581f9c.nq.gz
+│   ├── 3d740e2a7297ceba0b0b82e55e3dc0004ec21abb.nq.gz
+│   ├── 3f6ceba6bbabac75e56231786e509fcc55cb683d.nq.gz
+│   ├── 44d85a69af55caf2d68ad29e4db774ef74fb4f49.nq.gz
+│   ├── 453f95a0e59341f342033038da10516a147c94e8.nq.gz
+│   ├── 486d85b4f52e0ccacbdbea31977f5e4b3d1a34b5.nq.gz
+│   ├── 4d7bbdd8418be5f0f2f62c04a0375501566d375b.nq.gz
+│   ├── 4f3e6bf57e7392853cd9465206b548f1d7d3c537.nq.gz
+│   ├── 5262fc772c52a98e4aab803c77df6b489ef315d6.nq.gz
+│   ├── 52978e7cfe529b0a63e61705c9c6c2f23d095dcd.nq.gz
+│   ├── 560a8bb3dfc1908007d58e3d51c43cb885084809.nq.gz
+│   ├── 5816fcffaeb6b1d34af27a4403d5efef5d5d44f3.nq.gz
+│   ├── 688f95d3136780b63e643f2e2f79338ac09371dc.nq.gz
+│   ├── 6c1f3df3e69aeaa800d3e400ad911d54e7821392.nq.gz
+│   ├── 7127d3405081e83827aaa26f3421726b49a8c95b.nq.gz
+│   ├── 7279128acb6838f0d4c2249810dcd62efbc7d642.nq.gz
+│   ├── 7868171e634e80762f84894a2634c5a1887b9968.nq.gz
+│   ├── 8056cbd34ed1f96df8e191c092b694b041c8359a.nq.gz
+│   ├── 83a733aa5585bd47fa0fc010bf3d62b5dba1bbb6.nq.gz
+│   ├── 8c863ea021847150987c493464ce9261241510cc.nq.gz
+│   ├── 8dc0cd9268be826a500b8cdc527a9bde8b0e067b.nq.gz
+│   ├── 93650417058e5cbe4d95538022181a25c81356ac.nq.gz
+│   ├── 94ca02f7d33f2710e7d8e8193608290cf3ed3c5d.nq.gz
+│   ├── 9a9fb5023a7875dcde5edcbe74e1a9b3f24b8bf8.nq.gz
+│   ├── 9cb518f5028d776e5cdb27300d7a2e34cc3eb09d.nq.gz
+│   ├── a59dd4869ec26f26180df932d346d8676d06bc12.nq.gz
+│   ├── a84cd5f9024b98fec1bde6acdb50970f53425cc7.nq.gz
+│   ├── a8eebe52c8545b32425b52e0e24c28b6e473320e.nq.gz
+│   ├── b648ac92333301658c4f49b315f21130c689c819.nq.gz
+│   ├── b76e2e09663c7f4b18bfd97982315371f3fcca9f.nq.gz
+│   ├── b9cd0f630ab1c05af055fd49e16e1c6c7d098ba0.nq.gz
+│   ├── ba217c1dc2e7d4e6aebac7d493b10055a7f948e1.nq.gz
+│   ├── ba48602f950ae0fea81d81f0174e5b7c4c0af98d.nq.gz
+│   ├── bd15daee2055beb4a78258fc49d03044316b9e7b.nq.gz
+│   ├── bdc72dadf82c47a617780a249711d97a8d83fc74.nq.gz
+│   ├── be006de9a1ae3b9628e796c74277cd6d61e0a34a.nq.gz
+│   ├── c33ca482775307f1cadc5328e03a682baabd4e56.nq.gz
+│   ├── c886c9da9da0889059ff44e603e6a80c61f528d4.nq.gz
+│   ├── cbf1e3658e6aa8a22988927b510080a973450f52.nq.gz
+│   ├── ce015770672ebe1146c110e05cdbf2a901dee31c.nq.gz
+│   ├── cf73fbe0a6be9fa28186c2f8ead75feee82a9136.nq.gz
+│   ├── d479e63948a5903090afaeb2704e5fcbb4039cec.nq.gz
+│   ├── e079f8a6038dd2dc8512967540f96ee0de172067.nq.gz
+│   ├── e59e2769eede2802efa03f9153fbb0fa96f22376.nq.gz
+│   ├── e60609d0bada8145ebf80f18e1051da98530f3b6.nq.gz
+│   ├── f062ff5cc790956515be4f782d7b771cf4c67b57.nq.gz
+│   ├── f454881cc27655d1dda77f82f349a8b0e01cdb00.nq.gz
+│   ├── f4f15e010ff97eddf1f94e63f55bc74fe2d7e2b7.nq.gz
+│   ├── f9700a84b724049b1cbbe58b0a8ac2ba40abb53a.nq.gz
+│   └── fbb947771434a4b10557faa6536f2bd996de0ecf.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 9dc1aa871bbeda6287628971fe1f84be4186c688.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 69 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[pytest-dev/pytest-qt](https://github.com/pytest-dev/pytest-qt)
+
+---
+*Parsed on 2026-10-11 by [repolex](https://repolex.ai)*
